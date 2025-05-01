@@ -35,3 +35,24 @@ def show_basket():
         print(f"{name} × {count} = {price} تومان")
     print(f"جمع کل: {total} تومان")
 
+def main():
+    while True:
+        print("\n1. نمایش گل‌ها")
+        print("2. افزودن به سبد")
+        print("3. نمایش سبد خرید")
+        print("4. خروج")
+        choice = input("انتخاب شما: ")
+        if choice == "1":
+            show_products()
+        elif choice == "2":
+            add_to_basket()
+        elif choice == "3":
+            show_basket()
+        elif choice == "4":
+            print("خروج از برنامه.")
+            break
+        else:
+            print("انتخاب نامعتبر.")
+
+if name == "__main__":
+    main()
