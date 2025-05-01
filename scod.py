@@ -25,3 +25,13 @@ def add_to_basket():
         print(f"{count} عدد {name} به سبد اضافه شد.")
     else:
         print("این گل موجود نیست.")
+
+def show_basket():
+    print("\n--- سبد خرید ---")
+    total = 0
+    for name, count in basket.items():
+        price = flowers[name] * count
+        total += price
+        print(f"{name} × {count} = {price} تومان")
+    print(f"جمع کل: {total} تومان")
+
